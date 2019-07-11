@@ -2,20 +2,38 @@ body{
     margin: 0;
     display: grid;
     grid-template-areas: 'header header header header'
-                         'navbar navbar navbar aside'
+                         'navbar navbar navbar navbar'
                          'section section section aside'
                          'footer footer footer footer';
     grid-template-rows: 30vh 20vh 60vh 40vh;
-    grid-gap: 15px;
 }
 
 header{
     grid-area: header;
-    background-color: blue;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: 200px;
+    height: 90%;
+    border-radius: 100%;
 }
 nav{
     grid-area: navbar;
     background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a{
+    color: white;
+    font-size: 20pt;
+    font-weight: 900;
+    text-decoration: none;''
 }
 section{
     grid-area: section;
@@ -24,8 +42,59 @@ section{
 aside{
     grid-area: aside;
     background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside h3{
+    color: magenta;
+    font-size: 20pt;
+}
+
+
+aside button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: aquamarine;
+    color: green;
+    border-radius: 10px;
+    cursor: pointer;
+}
+aside input{
+    border: none;
+    height: 30px;
+    width: 250px;
+    border-bottom: 1px red solid;
+    background-color: transparent;
+    color: limegreen;
+    font-size: 14pt;
+}
+
+aside input::placeholder{
+    font-size: 14pt;
+    color: aqua;
+}
+
+aside input:nth-child(3){
+    margin-top: 10px;
 }
 footer{
     grid-area: footer;
-    background-color: purple;
+    background-color: magenta;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div{
+    width: 150px;
+    height: 40px;
+    /* background-color: limegreen; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
